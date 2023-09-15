@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email Verification"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"/>
+
+    <EditText
+        android:id="@+id/editTextCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:width="50dp"
+        android:gravity="center"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_alignParentLeft="true"/>
+
+    <EditText
+        android:id="@+id/editTextCode2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_toRightOf="@+id/editTextCode"
+        android:layout_marginTop="32dp"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:width="50dp"
+        android:gravity="center"
+        android:layout_marginRight="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextCode3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_toRightOf="@+id/editTextCode2"
+        android:layout_marginTop="32dp"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:width="50dp"
+        android:gravity="center"
+        android:layout_marginRight="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextCode4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_toRightOf="@+id/editTextCode3"
+        android:layout_marginTop="32dp"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:width="50dp"
+        android:gravity="center"
+        android:layout_marginRight="20dp"/>
+
+    <EditText
+        android:id="@+id/editTextCode5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewTitle"
+        android:layout_toRightOf="@+id/editTextCode4"
+        android:layout_marginTop="32dp"
+        android:inputType="number"
+        android:maxLength="1"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:width="50dp"
+        android:gravity="center"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/textViewResend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend code in 23s"
+        android:textSize="16sp"
+        android:layout_below="@+id/editTextCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"/>
+
+    <GridLayout
+        android:id="@+id/gridLayoutKeypad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewResend"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:orientation="horizontal">
+
+        <!-- Keypad buttons -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="1"
+            android:textSize="24sp"
+            android:onClick="onKeypadButtonClick"/>
+
+        <!-- Add buttons for digits 2-9 here -->
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="0"
+            android:textSize="24sp"
+            android:onClick="onKeypadButtonClick"/>
+
+        <Button
+            android:id="@+id/buttonBackspace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Backspace"
+            android:textSize="16sp"
+            android:onClick="onBackspaceButtonClick"/>
+    </GridLayout>
+
+</RelativeLayout>
